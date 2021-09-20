@@ -26,7 +26,7 @@ double max_offdiag_symmetric(const arma::mat& A, int& k, int& l){
 
         if (n > 1) {
 
-                //Then, if A satisfy both of the conditions mentioned above, we
+                //Then, if A satisfy both of the conditions mentioned above, we start comparing each of the elements of the superior triangle>
 
                 for (int i = 0; i < n; i++) {
                    
@@ -61,9 +61,11 @@ double max_offdiag_symmetric(const arma::mat& A, int& k, int& l){
 
    }
 
-   return maxval;                   
- 
- }
+   //Finally, the function returns the maxval that we found
+
+   return maxval;
+
+}
 
 
 
@@ -85,4 +87,4 @@ int main() {
    return 0;
 
 }
-  
+   
