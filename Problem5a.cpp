@@ -1,6 +1,5 @@
 #include "Problem5a-2.hpp"
 
-
 int main(){
 
     double eps = pow(10, -8);
@@ -45,8 +44,6 @@ int main(){
     eigenvalues.print("Eigenvalues:");
 
     eigenvectors.print("Eigenvectors:");
-    
-    cout << "Done" << endl;
     
     return 0;
 
