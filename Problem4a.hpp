@@ -22,15 +22,15 @@ double max_offdiag_symmetric(const arma::mat& A, int& k, int& l) {
 
         //Here we store the dimension of the matrix so we are able to use it in an easier way later
 
-        int n = A.n_rows;
+        int N = A.n_rows;
 
-        if (n > 1) {
+        if (N > 1) {
 
             //Then, if A satisfy both of the conditions mentioned above, we start comparing each of the elements of the superior triangle>
 
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < N; i++) {
 
-                for (int j = 0; j < n; j++) {
+                for (int j = 0; j < N; j++) {
 
                     if (i < j && abs(A(i, j)) > maxval) {
 
