@@ -61,10 +61,10 @@ int main(){
         eigval.print("Eigenvalues:");
         eigvec_normalised.print("Eigenvectors:");
 
-        mat aeigvec;
+        mat aeigvect;
         vec aeigval;
 
-        check_values(aeigvec, aeigval, a, d, N, eigval, eigvec_normalised);
+        check_values(aeigvect, aeigval, a, d, N, eigval, eigvec_normalised);
 
         return 0;
 
