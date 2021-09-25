@@ -19,18 +19,20 @@ void check_values(mat& aeigvec, vec& aeigval, const vec a, const vec d, const in
         }
 
         //mat aeigvec(N, N, fill::zeros);
-
+        
+        mat aeigvect;
+        
         for(int i = 0; i < N; i++){
                 for (int j = 0; j < N; j++){
 
-                        aeigvec(j,i) = sin((j+1)*(i+1)*M_PI/(N+1));
+                        aeigvect(j,i) = sin((j+1)*(i+1)*M_PI/(N+1));
                 }
         }
 
-        mat aeigvect = aeigvec.t();
+        mat aeigvec = aeigvect.t();
 
 
-        aeigvect.print("Analytical eigenvectors:");
+        aeigvec.print("Analytical eigenvectors:");
         aeigval.print("Analytical eigenvalues:");
 
         int b;
@@ -39,7 +41,7 @@ void check_values(mat& aeigvec, vec& aeigval, const vec a, const vec d, const in
         for (int i = 0; i < N; i++){
                 for (int j = 0; j < N; j++){
 
-                        double c = 1. / sqrt(pow(aeigvect[j,0],2)+pow(aeigvect[j,1],2)+pow(aeigvect[j,2],2)+pow(aeigvect[j,3],2)+pow(aeigvect[j,4],2));
+                        double c = 1. / sqrt(pow(aeigvec[j,0],2)+pow(aeigvec[j,1],2)+pow(aeigvec[j,2],2)+pow(aeigvect[j,3],2)+pow(aeigvec[j,4],2));
 
                         if (round(eigval[i]) == round(aeigval[i])){
 
@@ -48,7 +50,7 @@ void check_values(mat& aeigvec, vec& aeigval, const vec a, const vec d, const in
                         else{
                                 b = 0;
                         }
-                        if (round(eigvec_normalised[j,i]) == round(aeigvect[j,i]*c)){
+                        if (round(eigvec_normalised[j,i]) == round(aeigvec[j,i]*c)){
                                 l = 1;
                         }
                         else{
