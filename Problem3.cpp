@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <fstream>
-#include "exercise3.hpp"
+#include "Problem3.hpp"
 
 using namespace arma;
 using namespace std;
