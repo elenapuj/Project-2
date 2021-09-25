@@ -61,9 +61,12 @@ int main(){
         eigval.print("Eigenvalues:");
         eigvec_normalised.print("Eigenvectors:");
 
+        //We define a matrix with the analytical eigenvectors and a vector with the analytical eigenvalues
+        
         mat aeigvec;
         vec aeigval;
 
+        //This function allows to check if the eigenvalues and eigenvectors obtained analitically matches the ones obtained with Armadillo
         check_values(aeigvec, aeigval, a, d, N, eigval, eigvec_normalised);
 
         return 0;
