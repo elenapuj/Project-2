@@ -28,9 +28,9 @@ void jacobi_rotate(mat& A, mat& R, int& k, int& l) {
 
     double s = c * t;
 
-    A(k, k) = A(k, k) * (c * c - 2. * c * s + s * s);
+    A(k, k) = A(k, k) * c * c - 2.* A(k, l) * c * s + A(l, l) * s * s;
 
-    A(l, l) = A(l, l) * (c * c + 2. * c * s + s * s);
+    A(l, l) = A(l, l) * c * c + 2. * A(k, l) * c * s + A(k, k) * s * s;
 
     A(k, l) = 0.;
 
