@@ -41,14 +41,14 @@ int main(){
 
         A(N - 1, N - 1) = d(N - 1);
 
-        vec eigenvalues;
-        mat eigenvectors;
+        vec eigenvalues(N);
+        mat eigenvectors(N, N);
         int maxiter = 10000;
         int iterations;
         bool converged;
 
-        vec aeigval;
-        mat aeigvec;
+        vec aeigval(N);
+        mat aeigvec(N, N);
 
         jacobi_eigensolver(A, eps, eigenvalues, eigenvectors, maxiter, iterations, converged);
 
