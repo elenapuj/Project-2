@@ -49,15 +49,26 @@ int main(){
         eigenvalues.print("Eigenvalues:");
         eigenvectors.print("Eigenvectors:");
 
-        ofstream ofile;
-        ofile.open("Problem7.txt");
-        ofile << scientific;
+//      ofstream ofile;
+//      ofile.open("Problem7.txt");
+//      ofile << scientific;
+
+        mat B(N, N, fill::zeros);
+
+//      B.insert_cols(0, eigenvalues);
+//      B.insert_cols(1, eigenvectors);
 
         for (int i = 0; i < N; i++){
-                ofile << eigenvalues(i) << eigenvectors(i,i) << endl;
+                B.col(0) = shift(eigenvalues, i);
+                B.cols(i+1) = shift(eigenvectors,i);
+//              B(i,0) = eigenvalues(i);
+//              B(i,i+1) = eigenvectors(i,i
         }
-
-        ofile.close();
-        return 0;
+        B.print("B:");
+//                      ofile << eigenvalues << "          " << eigenvectors << e>//              }
+//      }
+//      ofile << eigenvalues << "               " << eigenvectors << endl;
+        
+                           return 0;
 }
           
