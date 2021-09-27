@@ -3,7 +3,8 @@
 int main() {
 
     double eps = pow(10, -8);
-
+    
+//We can use ofstream ofile to create a .txt file to save the number of iterations and the size of the matrix
     ofstream ofile;
     ofile.open("iterations.txt");
     ofile << "N     iterations" << endl;
@@ -53,6 +54,8 @@ int main() {
 
     ofile.close();
 
+    //As this code takes some minutes to run
+    
     cout << "iterations.txt has been created" << endl;
 
     return 0;
