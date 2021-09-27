@@ -41,8 +41,6 @@ for i in range(0,1):
     
     
 plt.title("Number of required transformations vs the matrix size N", fontsize=10)
-#plt.legend( ["10" , "100" , "1000" , "10000" , "100000", "1000000"] ,
-#           loc='lower center',  prop={'size': 4})
 plt.ylabel('Number of transformations')
 plt.xlabel("N")
 plt.grid(True) #Grids get painted
