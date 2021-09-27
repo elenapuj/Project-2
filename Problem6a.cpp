@@ -5,7 +5,7 @@ int main(){
     double eps = pow(10, -8);
 
     ofstream ofile;
-    ofile.open("interations.txt");
+    ofile.open("iterations.txt");
     ofile << "N     iterations" << endl;
     ofile << scientific;
 
