@@ -39,19 +39,32 @@ for i in range (0,n+1):
     x.append(0 +i*h)
 
 #Plot          
+
 plt.figure()
-plt.plot(x,first_eigenvector, color='blue')
-plt.xlabel('x_hat')
+plt.title("v_i vs x_i for the three lowest eigenvalues")
+plt.plot(x, first_eigenvector, color = 'blue', label = 'Lowest solution of the differential equation')
+plt.legend(loc = "lower left")
+plt.ylim([-0.3,0.2])
+plt.xlabel('x')
 plt.ylabel('v')
 plt.grid(True)
 
-plt.plot(x,second_eigenvector, color='red')
-plt.xlabel('x_hat')
+plt.plot(x, second_eigenvector, color = 'red', label = 'Second lowest solution of the differential equation')
+plt.legend(loc = "lower left")
+plt.ylim([-0.3,0.2])
+plt.xlabel('x')
 plt.ylabel('v')
 plt.grid(True)
 
-plt.plot(x,third_eigenvector, color='green')
-plt.xlabel('x_hat')
+plt.plot(x, third_eigenvector, color = 'green', label = 'Third lowest solution of the differential equation')
+plt.legend(loc = "lower left")
+plt.ylim([-0.3,0.2])
+plt.xlabel('x')
 plt.ylabel('v')
 plt.grid(True)
+
 plt.show()
+
+#The graph is saved in a PDF file
+
+plt.savefig("Problem7b.pdf")
