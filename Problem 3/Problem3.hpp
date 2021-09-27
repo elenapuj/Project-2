@@ -63,7 +63,6 @@ void check_values(mat& aeigvec, vec& aeigval, vec a, vec d, const int N, const v
 		if (abs(eigval(i) - aeigval(i)) < eps){
 
 			val = true;
-			cout << "val=true" << endl;
 
 
 			//If it matches, we will continue comparing the correspondent eigenvector
@@ -75,14 +74,12 @@ void check_values(mat& aeigvec, vec& aeigval, vec a, vec d, const int N, const v
                 	        if (abs(abs(eigvec_normalised(j,i)) - abs(aeigvecn(j,i))) < eps){
 
                         	        vec = true;
-                                	cout << "vec=true" << endl;
 
                         	}
 
                         	else{
 
                                 	vec = false;
-                                	cout << "vec=false" << endl;
 
                                 	goto FINAL;
 
@@ -96,7 +93,6 @@ void check_values(mat& aeigvec, vec& aeigval, vec a, vec d, const int N, const v
 		else{
 
 			val = false;
-                        cout << "val=false" << endl;
 
                         goto FINAL;
 
