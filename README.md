@@ -6,11 +6,12 @@ In this readme we will explain how to run each code of each problem. As a genera
 
 # Problem 3
 
-In this problem the file "Problem3.hpp" should be in the same folder than "Problem3.cpp" to be able to run this program. (You can found this files in the folder Problem3). The file "Problem3.hpp" is just a function that checks if the eigenvalues and eigenvectors you put as an argument, are the same as the ones obtained analytically.
+In this problem the file "Problem3.hpp" should be in the same folder than "Problem3.cpp" to be able to run the program we were asked for. The file "Problem3.hpp" is just a function that checks if the eigenvalues and eigenvectors you put as an argument, are the same as the ones obtained analytically. We did it this way in order to be able to use the function in other problems.
 
 
 # Problem 4
-The file "Problem4.hpp" is just the function that gets the maximum off-diagonal value of a symmetric matrix so it is not executable for itself. The file "Problem4b.cpp" is the one you can execute with an example inside. As in the previous exercise, you need to have both files
+
+The file "Problem4.hpp" is just the function that gets the maximum off-diagonal value of a symmetric matrix so it is not executable for itself. The file "Problem4b.cpp" is the one you can execute with the requested example inside. As in the previous exercise, you need to have both files in the same folder in order to execute "Problem4b.cpp".
 
 
 # Problem 5
@@ -22,17 +23,17 @@ For section b, you should include in the same folder than "Problem5b.cpp" files 
 
 # Problem 6
 
-For section a, to run "Problem6a.cpp" you should include in the same folder files "Problem4a.hpp", "Problem5a-1.hpp" and "Problem5a-2.hpp". 
+For section a, to run "Problem6a.cpp" you should include in the same folder where "Problem6a.cpp" is, the files "Problem4a.hpp", "Problem5a-1.hpp", "Problem5a-2.hpp". 
 
-For section b, to run "Problem6b.cpp" you should include in the same folder files "Problem4a.hpp", "Problem5a-1.hpp" and "Problem5a-2.hpp". 
+For section b, to run "Problem6b.cpp" you should include in the same folder where "Problem6b.cpp" is files "Problem4a.hpp", "Problem5a-1.hpp" and "Problem5a-2.hpp". 
 
 In order to run "Problem6a.py", you will need the file "iterations.txt" which you can generate via "Problem6a.cpp" or use directly the file in Problem6/Plots.
 
 In order to run "Problem6b.py", you will need the files "iterations.txt" and "iterations_densematrix.txt" which you can generate via "Problem6a.cpp" and "Problem6b.cpp" or use directly the files in Problem6/Plots.
 
+These last two programs are used to obtained the graphs used in the final PDF
+
 
 # Problem 7
 
-For section a, to run "Problem7a.cpp" a you should include in the same folder files "Problem7a.txt" and "Problem7a.py". (The folder's name is Problem7a).
-
-For section b, to run "Problem7b.cpp" a you should include in the same folder files "Problem7b.txt" and "Problem7b.py". (The folder's name is Problem7b).
+For both section a and b, you just need to execute "Problem7a.py" and "Problem7b.py" and, for that purpose you will need the file 
