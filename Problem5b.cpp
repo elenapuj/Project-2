@@ -33,18 +33,26 @@ int main(){
         //The last element of the matrix A needs to be created apart becuase the loop goes until N-2
 
         A(N - 1, N - 1) = d(N - 1);
-
-        vec eigenvalues(N);
-        mat eigenvectors(N, N);
+        
         int maxiter = 10000;
         int iterations;
         bool converged;
 
-        vec aeigval(N);
-        mat aeigvec(N, N);
+        //We define a vector that contains the eigenvalues and a matrix that contains the eigenvectors, both values obtained with the function jacobi_eigensolver
+        
+        vec eigenvalues(N);
+        mat eigenvectors(N, N);
+        
+        //With the following function we get the eigevalues and eigenvectors
 
         jacobi_eigensolver(A, eps, eigenvalues, eigenvectors, maxiter, iterations, converged);
+        
+        //We define a vector that contains the analytical eigenvalues and a matrix that contains the analytical eigenvectors
 
+        vec aeigval(N);
+        mat aeigvec(N, N);
+        
+        //This function allows to check if the eigenvalues and eigenvectors obtained analitically matches the ones obtained with jacobi_eigensolver
 
         check_values(aeigvec, aeigval, a, d, N, eigenvalues, eigenvectors);
 
