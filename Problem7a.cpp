@@ -37,22 +37,27 @@ int main(){
         }
 
         //The last element of the matrix A needs to be created apart becuase the loop goes until N-2
-
+ 
         A(N - 1, N - 1) = d(N - 1);
+
+
+        //We define a vector that contains the eigenvalues and a matrix that contains the eigenvectors
 
         vec eigenvalues;
         mat eigenvectors;
+
         int maxiter = 10000;
         int iterations;
         bool converged;
 
+        //With the following function we get the eigevalues and eigenvectors
+
         jacobi_eigensolver(A, eps, eigenvalues, eigenvectors, maxiter, iterations, converged);
 
-        eigenvalues.print("Eigenvalues:");
-        eigenvectors.print("Eigenvectors:");
+        //We create a .txt file that stores the matrix that contains the eigenvectors
 
         ofstream ofile;
-        ofile.open("Problem7a.txt");
+        ofile.open("Problem7b.txt");
         ofile << scientific;
         ofile << eigenvectors << endl;
         ofile.close();
