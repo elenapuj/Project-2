@@ -54,6 +54,15 @@ int main(){
 
         jacobi_eigensolver(A, eps, eigenvalues, eigenvectors, maxiter, iterations, converged);
 
+        //We create a vector M full of zeros
+        
+        rowvec M(N, fill::zeros);
+        
+        //We insert this vector at the beggining and at the end of the matrix that contains the eigenvectors (this is done to include the boundary conditions)
+        
+        eigenvectors.insert_rows(0, M);
+        eigenvectors.insert_rows(N+1, M);
+        
         //We create a .txt file that stores the matrix that contains the eigenvectors
 
         ofstream ofile;
