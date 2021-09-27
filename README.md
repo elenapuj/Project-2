@@ -36,4 +36,4 @@ These last two programs are used to obtained the graphs used in the final PDF
 
 # Problem 7
 
-For both section a and b, you just need to execute "Problem7a.py" and "Problem7b.py" and, for that purpose you will need the file "Problem7a.txt" or "Problem7b.txt" which you can generate via "Problem7a.cpp" and "Problem7b.cpp" or use directly the files in Problem7/Plots.
+For both section a and b, you just need to execute "Problem7a.py" and "Problem7b.py" and, for that purpose, you will need the file "Problem7a.txt" or "Problem7b.txt"(respectively) which you can generate via "Problem7a.cpp" and "Problem7b.cpp" or use directly the files in Problem7/Plots.
