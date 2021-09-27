@@ -2,6 +2,7 @@
 """
 @author: María Pérez
 """
+
 import matplotlib.pyplot as plt
 from typing import List
 
@@ -22,9 +23,10 @@ with  open('Problem7b.txt', "r") as  infile:
     
     for  line in  lines:
         vals = line.split()
-        first_eigenvector.append(float(vals [2]))
-        second_eigenvector.append(float(vals [4]))
-        third_eigenvector.append(float(vals [6]))
+        #vals = lines
+        first_eigenvector.append(float(vals [0]))
+        second_eigenvector.append(float(vals [1]))
+        third_eigenvector.append(float(vals [2]))
 
 """
 We create a vector x that will contain the values of x that are calculated
@@ -33,23 +35,23 @@ in the following loop
 
 x: List[float] = []
 
-for i in range (0,n-1):
+for i in range (0,n+1):
     x.append(0 +i*h)
 
 #Plot          
 plt.figure()
 plt.plot(x,first_eigenvector, color='blue')
-plt.xlabel('xgorro')
+plt.xlabel('x_hat')
 plt.ylabel('v')
 plt.grid(True)
 
 plt.plot(x,second_eigenvector, color='red')
-plt.xlabel('xgorro')
+plt.xlabel('x_hat')
 plt.ylabel('v')
 plt.grid(True)
 
 plt.plot(x,third_eigenvector, color='green')
-plt.xlabel('xgorro')
+plt.xlabel('x_hat')
 plt.ylabel('v')
 plt.grid(True)
 plt.show()
