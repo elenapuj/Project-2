@@ -33,7 +33,25 @@ void jacobi_eigensolver(mat A, double eps, vec& eigenvalues, mat& eigenvectors, 
 
 	}
 
-	eigenvalues = diagvec(R.t() * A * R);
+	eigenvalues = diagvec(A);
 
-	eigenvectors = R;
+	R = normalise(R);
+
+
+	uvec ind = sort_index(eigenvalues);
+
+	eigenvalues = sort(eigenvalues);
+
+
+	for(int i=0; i < N; i++){
+
+		eigenvectors.shed_col(i);
+
+		eigenvectors.insert_cols(i, R.col(ind(i)));
+
+	}
+
+
+	//eigenvectors.shed_col(N-1);
+
 }
