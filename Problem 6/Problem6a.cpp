@@ -39,6 +39,8 @@ int main() {
         //The last element of the matrix A needs to be created apart becuase the loop goes until N-2
 
         A(N - 1, N - 1) = d(N - 1);
+        
+        //We define some variables we need for the jacobi_eigensolver function
 
         vec eigenvalues;
         mat eigenvectors;
