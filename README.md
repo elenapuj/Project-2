@@ -16,4 +16,5 @@ For section b, you should include in the same folder than "Problem5b.cpp" files 
 # Problem 7
 
 For section a, to run "Problem7a.cpp" a you should include in the same folder files "Problem7a.txt" and "Problem7a.py". (The folder's name is Problem7a)
+
 For section b, to run "Problem7b.cpp" a you should include in the same folder files "Problem7b.txt" and "Problem7b.py". (The folder's name is Problem7b)
