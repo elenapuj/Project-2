@@ -53,8 +53,6 @@ int main() {
     }
 
     ofile.close();
-
-    //As this code takes some minutes to run
     
     cout << "iterations.txt has been created" << endl;
 
