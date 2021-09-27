@@ -16,6 +16,14 @@ For section b, you should include in the same folder than "Problem5b.cpp" files 
 
 # Problem 6
 
+For section a, to run "Problem6a.cpp" you should include in the same folder files "Problem4a.hpp", "Problem5a-1.hpp" and "Problem5a-2.hpp". 
+
+For section b, to run "Problem6b.cpp" you should include in the same folder files "Problem4a.hpp", "Problem5a-1.hpp" and "Problem5a-2.hpp". 
+
+In order to run "Problem6a.py", you will need the file "iterations.txt" which you can generate via "Problem6a.cpp" or use directly the file in Problem6/Plots.
+
+In order to run "Problem6b.py", you will need the files "iterations.txt" and "iterations_densematrix.txt" which you can generate via "Problem6a.cpp" and "Problem6b.cpp" or use directly the files in Problem6/Plots.
+
 # Problem 7
 
 For section a, to run "Problem7a.cpp" a you should include in the same folder files "Problem7a.txt" and "Problem7a.py". (The folder's name is Problem7a).
