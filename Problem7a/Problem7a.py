@@ -22,9 +22,9 @@ with  open('Problem7a.txt', "r") as  infile:
     
     for  line in  lines:
         vals = line.split()
-        first_eigenvector.append(float(vals [2]))
-        second_eigenvector.append(float(vals [4]))
-        third_eigenvector.append(float(vals [6]))
+        first_eigenvector.append(float(vals [0]))
+        second_eigenvector.append(float(vals [1]))
+        third_eigenvector.append(float(vals [2]))
 
 """
 We create a vector x that will contain the values of x that are calculated
