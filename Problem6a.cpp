@@ -59,7 +59,7 @@ int main(){
 
     ofile.close();
 
-    cout << "Done" << endl;
+    cout << "iterations.txt has been created" << endl;
     
     return 0;
 
