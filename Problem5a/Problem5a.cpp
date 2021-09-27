@@ -2,6 +2,8 @@
 
 int main(){
 
+    //Epsilon is defined, and the size of the different matrix is given
+    
     double eps = pow(10, -8);
     
     int N = 6;
