@@ -43,8 +43,8 @@ int main(){
 
         //We define a vector that contains the eigenvalues and a matrix that contains the eigenvectors
 
-        vec eigenvalues;
-        mat eigenvectors;
+        vec eigenvalues(N);
+        mat eigenvectors(N,N);
 
         int maxiter = 10000;
         int iterations;
