@@ -33,47 +33,46 @@ int main() {
         A(i, i) = d(i);
         A(i, i + 1) = a(i);
         A(i + 1, i) = a(i);
-
     }
+    
     //The last element of the matrix A needs to be created apart becuase the loop goes until N-2
 
     A(N - 1, N - 1) = d(N - 1);
 
+    //We define a vector that contains the eigenvalues and a matrix that contains the eigenvectors
+    
     vec eigenvalues(N);
     mat eigenvectors(N,N);
+    
     int maxiter = 10000;
     int iterations;
     bool converged;
 
+    //With the following function we get the eigevalues and eigenvectors
+    
     jacobi_eigensolver(A, eps, eigenvalues, eigenvectors, maxiter, iterations, converged);
-
-    //eigenvalues.print("Eigenvalues:");
-    //eigenvectors.print("Eigenvectors:");
-
+    
+    //We create a vector M full of zeros
+    
     rowvec M(N, fill::zeros);
+    
+    //We insert this vector at the beggining and at the end of the matrix that contains the eigenvectors (this is done to include the boundary conditions)
+    
     eigenvectors.insert_rows(0, M);
     eigenvectors.insert_rows(N + 1, M);
-
-    ofstream ofile;
-    ofile.open("Problem7b.txt");
-    ofile << scientific;
-    //ofile << eigenvectors << endl;
-
-    /*
-    for (int i = 0; i < N + 2 ; i++) {
-        for (int j = 0; j < N; j++) {
-            ofile << eigenvectors(j,i) << endl;
-        }
-    }*/
-    /*
-    for (int i = 0; i < N + 2; i++) {
-        ofile << eigenvectors.row(i) << endl;
-    }
-    */
-
+    
+    //We create three vectors that contains the vectors, of the matrix eigenvectors, corresponding to the lowest eigenvalues
+    
     vec v1 = eigenvectors.col(0);
     vec v2 = eigenvectors.col(1);
     vec v3 = eigenvectors.col(2);
+    
+    //We create a .txt file that stores the matrix that contains the eigenvectors
+    
+    ofstream ofile;
+    ofile.open("Problem7b.txt");
+    ofile << scientific;
+    
     for (int i = 0; i < N + 2; i++) {
         ofile << v1(i) << "   " << v2(i) << "   " << v3(i) << endl;
     }
