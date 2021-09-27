@@ -37,7 +37,7 @@ for i in range(0,1):
     it = np.array(it1)
     
     plt.plot(N, it , linewidth = 0.5 )
-    plt.plot(N, it , '.' , color = 'blue' , label = 'Tridiagonal')
+    plt.plot(N, it , '.' , color = 'blue' , label = 'Dense')
     
     
 # Let's compare them with the previous tridiagonal matrices   
@@ -63,7 +63,7 @@ for i in range(0,1):
     it = np.array(it1)
     
     plt.plot(N, it , linewidth = 0.5, color = 'pink' )
-    plt.plot(N, it , '.' , color = 'red' , label = 'Dense')
+    plt.plot(N, it , '.' , color = 'red' , label = 'Tridiagonal')
     
 plt.title("Number of required transformations vs the matrix size N", fontsize=10)
 plt.legend()
