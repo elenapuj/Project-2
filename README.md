@@ -4,6 +4,8 @@ In this readme we will explain how to run each code of each problem.
 
 # Problem 3
 
+In this problem the file "Problem3.hpp" should be in the same folder than "Problem3.cpp" to be able to run this program. (You can found this files in the folder Problem3).
+
 # Problem 4
 
 # Problem 5
